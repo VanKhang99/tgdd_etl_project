@@ -1,5 +1,6 @@
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
+import re
 
 def check_element_html(parent_tag, xpath, one_tag=True):
     try:
@@ -22,3 +23,6 @@ def handle_classes_base_on_url(url):
         helper_assign_attribute(parent_tag_class =' item ajaxed __cate_522', parent_image_link_class='item-img item-img_522')
 
     return classes_base_on_url
+
+def helper_tranform_int(regex, content, index):
+    return int(re.findall(f'{regex}', content)[index])  

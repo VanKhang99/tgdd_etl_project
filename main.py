@@ -11,7 +11,7 @@ from helper_functions import check_element_html, handle_classes_base_on_url
 from products import Product
 from products_rating import ProductsRating
 from products_group import ProductsGroup
-from specifications_product import LaptopSpecifications
+from specifications_product import LaptopSpecifications, PhoneSpecifications
 
 urls = [
     "https://www.thegioididong.com/dtdd-samsung"
@@ -48,10 +48,10 @@ def main():
             # print(product_rating.__dict__)
             
             ### Find data of table "PRODUCTS_GROUPS" ###
-            group_tag = check_element_html(parent_tag, "./a[@class='main-contain ']//div[@class='prods-group']")
-            if group_tag is not None:
-                products_group = ProductsGroup(product_id, group_tag)
-                print(products_group.__dict__)
+            # group_tag = check_element_html(parent_tag, "./a[@class='main-contain ']//div[@class='prods-group']")
+            # if group_tag is not None:
+            #     products_group = ProductsGroup(product_id, group_tag)
+            #     print(products_group.__dict__)
             
             
             ### Find data of table "LAPTOP_SPECIFICATIONS" ###
@@ -63,7 +63,15 @@ def main():
             # laptop_specifications = LaptopSpecifications(product_id, specification_tags, ram_capacity_tags)
             # print(laptop_specifications.__dict__) 
                 
-            ### Find data of table "LAPTOP_SPECIFICATIONS" ###
+            ### Find data of table "PHONE_SPECIFICATIONS" ###
+            screen_tags = check_element_html(parent_tag, "./a[@class='main-contain ']//div[@class='item-compare gray-bg']/span", False)
+            specification_tags = check_element_html(parent_tag, ".//div[@class='utility']//p", False)
+            if screen_tags is None or specification_tags is None:
+                raise ValueError('No tags found. Something went wrong with your xpath "screen_tags or specification_tags", please check it.')
+            
+            phones_specifications = PhoneSpecifications(product_id, screen_tags, specification_tags)
+            print(phones_specifications.__dict__)  
+            
             print(f'############ {i} ############')
             i += 1
             
