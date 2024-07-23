@@ -24,5 +24,5 @@ def handle_classes_base_on_url(url):
 
     return classes_base_on_url
 
-def helper_tranform_int(regex, content, index):
-    return int(re.findall(f'{regex}', content)[index])  
+def tranform_int(regex, content, index):
+    return int(re.findall(regex, content)[index])  

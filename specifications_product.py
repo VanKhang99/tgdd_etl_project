@@ -2,7 +2,8 @@ from selenium.webdriver.common.by import By
 import re
 
 # IMPORT FILE FROM MY SOURCE
-from helper_functions import helper_tranform_int
+from helper_functions import tranform_int
+from constants import REGEX_ONLY_DIGITS
 
 class LaptopSpecifications:
     def __init__(self, product_id, specification_tags, ram_capacity_tags):
@@ -19,8 +20,8 @@ class LaptopSpecifications:
         self.ram = None
         self.capacity = None
         
+        self.get_another_specifications(specification_tags)
         self.get_ram_capacity(ram_capacity_tags)
-        self.get_remaining_specifications(specification_tags)
         
     def handle_data_screen(self, data_screen):
         data_screen = data_screen.split(', ')
@@ -43,27 +44,18 @@ class LaptopSpecifications:
             self.core_speed = data_cpu_splited[2]
     
     def get_ram_capacity(self, ram_capacity_tags):
-        for tag in ram_capacity_tags:
-            if 'RAM' in tag.text:
-                self.ram = helper_tranform_int('[\d]+', tag.text, 0)
-            elif 'SSD' or 'HDD' in tag.text:
-                self.capacity = helper_tranform_int('[\d]+', tag.text, 0)
+        ram, capacity = [tag.text for tag in ram_capacity_tags]
+        self.ram = tranform_int(REGEX_ONLY_DIGITS, ram, 0)
+        self.capacity = tranform_int(REGEX_ONLY_DIGITS, capacity, 0)
+        
                   
-    def get_remaining_specifications(self, specification_tags):
-        for tag in specification_tags:
-            specification_values = tag.text.split(':')[1].strip()
-            
-            if 'Màn hình' in tag.text:
-                self.handle_data_screen(specification_values)
-            elif 'Card' in tag.text:
-                self.card_screen = specification_values
-            elif 'CPU' in tag.text:
-                self.handle_data_cpu(specification_values)
-            elif 'Pin' in tag.text:
-                self.battery = specification_values
-            elif 'Khối lượng' in tag.text:
-                self.weight_kg = float(specification_values.replace(' kg', ''))
-                                   
+    def get_another_specifications(self, specification_tags):
+        screens, cpu, card, battery, weight = [tag.text.split(':')[1].strip() for tag in specification_tags]
+        self.handle_data_screen(screens)
+        self.card_screen = card
+        self.handle_data_cpu(cpu)
+        self.battery = battery
+        self.weight_kg = float(weight.replace(' kg', ''))                                 
 class PhoneSpecifications:
     def __init__(self, product_id, screen_tags, specification_tags):
         self.product_id = product_id
@@ -75,40 +67,34 @@ class PhoneSpecifications:
         self.capacity = None
         self.back_camera = None
         self.front_camera = None
-        self.battery_mAh = None
+        self.battery = None
         self.charge_W = None
 
         self.get_data_screen(screen_tags)
-        self.get_remaining_specifications(specification_tags)
+        self.get_another_specifications(specification_tags)
         
     def get_data_screen(self, screen_tags):
-        for tag in screen_tags:
-            content = tag.text
+        data_screens, resolution = [tag.text for tag in screen_tags]
+   
+        number_screen = re.findall(REGEX_ONLY_DIGITS, data_screens)
+        self.main_screen_inch = float(number_screen[0])
+        if len(number_screen) > 1:
+            self.secondary_screen_inch = float(number_screen[1])
         
-            if '"' in content:
-                data_screen = re.findall(r'[\d.]+', content)
-                self.main_screen_inch = float(data_screen[0])
-                
-                if len(data_screen) > 1:
-                    self.secondary_screen_inch = float(data_screen[1])
-            else:
-                self.screen_resolution = content.strip()
+        self.screen_resolution = resolution.strip()
     
-    def get_remaining_specifications(self, specification_tags):
-        for tag in specification_tags:
-            content = tag.text
-            
-            if 'Chip' in content:
-                self.chip = content.strip()
-            elif 'RAM' in content:
-                self.ram = helper_tranform_int('[\d]+', tag.text, 0)
-            elif 'Dung lượng' in content:
-                self.capacity = helper_tranform_int('[\d]+', tag.text, 0)
-            elif 'Camera sau' in content:
-                self.back_camera = content.split(':')[1].strip()
-            elif 'Camera trước' in content:
-                self.front_camera = content.split(':')[1].strip()
-            elif 'Pin' or 'Sạc' in content:
-                data = content.split(', ')
-                self.battery_mAh = helper_tranform_int('[\d]+', data[0], 0)
-                self.charge_W = helper_tranform_int('[\d]+', data[1], 0)
+    def get_another_specifications(self, specification_tags):
+        chip, ram, capacity, back_camera, front_camera, battery_charge = [tag.text for tag in specification_tags]
+        
+        self.chip = chip.strip()
+        self.ram = tranform_int(REGEX_ONLY_DIGITS, ram, 0)
+        self.capacity = tranform_int(REGEX_ONLY_DIGITS, capacity, 0)
+        self.back_camera = back_camera.split(':')[1].strip()
+        self.front_camera = front_camera.split(':')[1].strip()
+        
+        battery, charge_W = battery_charge.split(', ')
+        self.battery = battery.strip()
+        self.charge_W = tranform_int(REGEX_ONLY_DIGITS, charge_W, 0)
+        
+       
+                

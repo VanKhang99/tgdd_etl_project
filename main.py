@@ -15,6 +15,7 @@ from specifications_product import LaptopSpecifications, PhoneSpecifications
 
 urls = [
     "https://www.thegioididong.com/dtdd-samsung"
+    # "https://www.thegioididong.com/dtdd-apple-iphone"
     # "https://www.thegioididong.com/laptop-asus"
     # "https://www.thegioididong.com/laptop-apple-macbook#c=44&m=203&o=17&pi=1",
     # "https://www.thegioididong.com/dtdd-samsung#c=42&m=2&o=17&pi=1",
@@ -54,7 +55,7 @@ def main():
             #     print(products_group.__dict__)
             
             
-            ### Find data of table "LAPTOP_SPECIFICATIONS" ###
+            ## Find data of table "LAPTOP_SPECIFICATIONS" ###
             # specification_tags = check_element_html(parent_tag, ".//div[@class='utility']//p", False)
             # ram_capacity_tags = check_element_html(parent_tag, "./a[@class='main-contain ']//div[@class='item-compare gray-bg']//span", False)
             # if specification_tags is None or ram_capacity_tags is None:

@@ -1,0 +1,1 @@
+REGEX_ONLY_DIGITS = r'[\d.]+'
