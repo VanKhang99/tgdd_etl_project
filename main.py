@@ -11,16 +11,32 @@ from helper_functions import check_element_html, handle_classes_base_on_url
 from products import Product
 from products_rating import ProductsRating
 from products_group import ProductsGroup
-from specifications_product import LaptopSpecifications, PhoneSpecifications
+from specifications_product import Laptop, Phone, Tablet
 
 urls = [
-    "https://www.thegioididong.com/dtdd-samsung"
+    # "https://www.thegioididong.com/may-tinh-bang-samsung"
+    # "https://www.thegioididong.com/dtdd-samsung"
     # "https://www.thegioididong.com/dtdd-apple-iphone"
-    # "https://www.thegioididong.com/laptop-asus"
+    "https://www.thegioididong.com/laptop-asus"
     # "https://www.thegioididong.com/laptop-apple-macbook#c=44&m=203&o=17&pi=1",
     # "https://www.thegioididong.com/dtdd-samsung#c=42&m=2&o=17&pi=1",
     # "https://www.thegioididong.com/may-tinh-bang-apple-ipad#c=522&m=1028&o=17&pi=1"
 ]
+
+def get_specifications_base_on_url(args):
+    url, product_id, parent_tag, xpaths = args.values()
+    
+    tag_utility = check_element_html(parent_tag, xpaths[0], False)
+    other_tag_specification = check_element_html(parent_tag, xpaths[1], False)
+    if tag_utility is None or other_tag_specification is None:
+        raise ValueError('No tags found. Something went wrong with your xpaths, please check it.')
+
+    if 'laptop' in url:
+        return Laptop(product_id, tag_utility, other_tag_specification)
+    elif 'dtdd' in url:
+        return Phone(product_id, tag_utility, other_tag_specification)
+    elif 'may-tinh-bang' in url:
+        return Tablet(product_id, tag_utility, other_tag_specification)
 
 def main():
     for url in urls:
@@ -53,26 +69,19 @@ def main():
             # if group_tag is not None:
             #     products_group = ProductsGroup(product_id, group_tag)
             #     print(products_group.__dict__)
-            
-            
-            ## Find data of table "LAPTOP_SPECIFICATIONS" ###
-            # specification_tags = check_element_html(parent_tag, ".//div[@class='utility']//p", False)
-            # ram_capacity_tags = check_element_html(parent_tag, "./a[@class='main-contain ']//div[@class='item-compare gray-bg']//span", False)
-            # if specification_tags is None or ram_capacity_tags is None:
-            #     raise ValueError('No tags found. Something went wrong with your xpath "specification_tags or ram_capacity_tags", please check it.')
-            
-            # laptop_specifications = LaptopSpecifications(product_id, specification_tags, ram_capacity_tags)
-            # print(laptop_specifications.__dict__) 
                 
-            ### Find data of table "PHONE_SPECIFICATIONS" ###
-            screen_tags = check_element_html(parent_tag, "./a[@class='main-contain ']//div[@class='item-compare gray-bg']/span", False)
-            specification_tags = check_element_html(parent_tag, ".//div[@class='utility']//p", False)
-            if screen_tags is None or specification_tags is None:
-                raise ValueError('No tags found. Something went wrong with your xpath "screen_tags or specification_tags", please check it.')
+            ## Find data of tables "LATOP_SPECIFICATIONS, PHONE_SPECIFICATIONS, TABLET_SPECIFICATIONS" ###
+            specifications =  get_specifications_base_on_url({
+                'url': url,
+                'product_id': product_id,
+                'parent_tag': parent_tag,
+                'xpaths': [
+                    ".//div[@class='utility']//p",
+                    "./a[@class='main-contain ']//div[@class='item-compare gray-bg']//span"
+                ]
+            })
             
-            phones_specifications = PhoneSpecifications(product_id, screen_tags, specification_tags)
-            print(phones_specifications.__dict__)  
-            
+            print(specifications.__dict__)
             print(f'############ {i} ############')
             i += 1
             

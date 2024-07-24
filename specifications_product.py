@@ -5,7 +5,7 @@ import re
 from helper_functions import tranform_int
 from constants import REGEX_ONLY_DIGITS
 
-class LaptopSpecifications:
+class Laptop:
     def __init__(self, product_id, specification_tags, ram_capacity_tags):
         self.product_id = product_id
         self.screen_inch = None
@@ -20,7 +20,7 @@ class LaptopSpecifications:
         self.ram = None
         self.capacity = None
         
-        self.get_another_specifications(specification_tags)
+        self.get_specifications(specification_tags)
         self.get_ram_capacity(ram_capacity_tags)
         
     def handle_data_screen(self, data_screen):
@@ -49,15 +49,16 @@ class LaptopSpecifications:
         self.capacity = tranform_int(REGEX_ONLY_DIGITS, capacity, 0)
         
                   
-    def get_another_specifications(self, specification_tags):
+    def get_specifications(self, specification_tags):
         screens, cpu, card, battery, weight = [tag.text.split(':')[1].strip() for tag in specification_tags]
         self.handle_data_screen(screens)
         self.card_screen = card
         self.handle_data_cpu(cpu)
         self.battery = battery
-        self.weight_kg = float(weight.replace(' kg', ''))                                 
-class PhoneSpecifications:
-    def __init__(self, product_id, screen_tags, specification_tags):
+        self.weight_kg = float(weight.replace(' kg', ''))           
+                              
+class Phone:
+    def __init__(self, product_id, specification_tags, screen_tags):
         self.product_id = product_id
         self.main_screen_inch = None
         self.secondary_screen_inch = None
@@ -70,8 +71,8 @@ class PhoneSpecifications:
         self.battery = None
         self.charge_W = None
 
+        self.get_specifications(specification_tags)
         self.get_data_screen(screen_tags)
-        self.get_another_specifications(specification_tags)
         
     def get_data_screen(self, screen_tags):
         data_screens, resolution = [tag.text for tag in screen_tags]
@@ -83,7 +84,7 @@ class PhoneSpecifications:
         
         self.screen_resolution = resolution.strip()
     
-    def get_another_specifications(self, specification_tags):
+    def get_specifications(self, specification_tags):
         chip, ram, capacity, back_camera, front_camera, battery_charge = [tag.text for tag in specification_tags]
         
         self.chip = chip.strip()
@@ -96,5 +97,45 @@ class PhoneSpecifications:
         self.battery = battery.strip()
         self.charge_W = tranform_int(REGEX_ONLY_DIGITS, charge_W, 0)
         
+class Tablet:
+    def __init__(self, product_id, specification_tags, screen_tags):
+        self.product_id = product_id
+        self.screen_inch = None
+        self.screen_type = None
+        self.chip = None
+        self.ram = None
+        self.capacity = None
+        self.features_supported = None
+        self.battery = None
+        self.charge_W = None
+        
+        self.get_specifications(specification_tags)
+        self.get_data_screen(screen_tags)
+        
+    def get_data_screen(self, screen_tags):
+        screen_type, screen_inch = [tag.text for tag in screen_tags]        
+        self.screen_inch =  float(screen_inch.replace('"', ''))
+        self.screen_type = screen_type.strip()
+    
+    def get_specifications(self, specification_tags):
+        data = [tag.text for tag in specification_tags]
+        
+        self.chip = data[0].strip()
+        self.ram = int(re.findall(r'[\d]+', data[1])[0])
+        self.capacity = int(re.findall(r'[\d]+', data[2])[0])
+
+        if len(data) > 4:
+            self.features_supported = data[3].strip()
+            
+            self.helper_battery_charge(data[4])
+        else:
+            self.helper_battery_charge(data[3])
+        
+    def helper_battery_charge(self, data):
+        battery, charge_W = data.split(', ')
+        self.battery = battery.strip()
+        self.charge_W = int(re.findall(r'[\d]+', charge_W)[0])
        
-                
+class Watch:
+    def __init__(self, product_id, specification_tags):
+        pass
