@@ -1,0 +1,60 @@
+product_id,screen_inch,screen_type,chip,ram,capacity,features_supported,battery,charge_W
+
+325501,11.0,Retina IPS LCD,Chip Apple M2 8 nhân,8,128,Nghe gọi qua FaceTime,Pin 28.93 Wh,20
+325513,11.0,Ultra Retina XDR,Chip Apple M4 9 nhân,8,256,Nghe gọi qua FaceTime,Pin 31.29 Wh,20
+320989,10.1,IPS LCD,Chip MediaTek MT8766,3,32,,Pin 6000 mAh,10
+320990,10.36,IPS LCD,Chip MediaTek MT8768,4,64,"Hỗ trợ 4G, Có nghe gọi",Pin 6000 mAh,10
+317621,8.7,TFT LCD,Chip MediaTek Helio G99,4,64,"Hỗ trợ 4G, Có nghe gọi",Pin 5100 mAh,15
+325506,13.0,Retina IPS LCD,Chip Apple M2 8 nhân,8,128,Nghe gọi qua FaceTime,Pin 36.59 Wh,20
+317623,11.0,TFT LCD,Chip Snapdragon 695,4,64,"5G, Có nghe gọi",Pin 7040 mAh,15
+325517,13.0,Ultra Retina XDR,Chip Apple M4 9 nhân,8,256,Nghe gọi qua FaceTime,Pin 38.99 Wh,20
+322613,11.4,IPS LCD,Chip MediaTek Helio G99,6,128,,Pin 8000 mAh,33
+318353,11.5,TFT LCD,Chip Snapdragon 685 8 nhân,4,128,,Pin 7250 mAh,22
+325988,12.1,IPS LCD,Chip Snapdragon 7s Gen 2 8 nhân,6,128,,Pin 10000 mAh,33
+325525,13.0,Retina IPS LCD,Chip Apple M2 8 nhân,8,128,"5G, Nghe gọi qua FaceTime",Pin 36.59 Wh,20
+250589,10.1,IPS LCD,Chip Spreadtrum SC9863A,3,32,"Hỗ trợ 4G, Có nghe gọi",Pin 6000 mAh,10
+325991,12.1,IPS LCD,Chip Snapdragon 7s Gen 2 8 nhân,8,256,,Pin 10000 mAh,33
+315590,11.0,TFT LCD,Chip Snapdragon 695,4,64,,Pin 7040 mAh,15
+325529,11.0,Ultra Retina XDR,Chip Apple M4 9 nhân,8,256,"5G, Nghe gọi qua FaceTime",Pin 31.29 Wh,20
+325992,12.1,IPS LCD,Chip Snapdragon 7s Gen 2 8 nhân,8,256,,Pin 10000 mAh,33
+325534,13.0,Ultra Retina XDR,Chip Apple M4 9 nhân,8,256,"5G, Nghe gọi qua FaceTime",Pin 38.99 Wh,20
+294103,10.9,Retina IPS LCD,Chip Apple A14 Bionic,4,64,Nghe gọi qua FaceTime,Pin 28.6 Wh (~ 7587 mAh),20
+309819,12.4,TFT LCD,Chip Exynos 1380 8 nhân,8,128,,Pin 10090 mAh,45
+247517,10.2,Retina IPS LCD,Chip Apple A13 Bionic,3,64,Nghe gọi qua FaceTime,Pin 32.4 Wh (~ 8600 mAh),20
+315390,8.7,TFT LCD,Chip MediaTek Helio G99,4,64,,Pin 5100 mAh,15
+248096,10.9,Retina IPS LCD,Chip Apple M1,8,64,Nghe gọi qua FaceTime,Pin 28.6 Wh (~ 7587 mAh),20
+285039,10.1,IPS LCD,Chip Unisoc T610,3,32,"Hỗ trợ 4G, Có nghe gọi",Pin 5000 mAh,10
+315607,11.0,IPS LCD,Chip Snapdragon 680 8 nhân,4,128,,Pin 8000 mAh,10
+325989,12.1,IPS LCD,Chip Snapdragon 7s Gen 2 8 nhân,8,128,,Pin 10000 mAh,33
+306923,9.0,IPS LCD,Chip MediaTek Helio G80,4,64,"Hỗ trợ 4G, Có nghe gọi",Pin 5100 mAh,10
+325537,13.0,Ultra Retina XDR,Chip Apple M4 10 nhân,16,2,"5G, Nghe gọi qua FaceTime",Pin 38.99 Wh,20
+325518,13.0,Ultra Retina XDR,Chip Apple M4 9 nhân,8,512,Nghe gọi qua FaceTime,Pin 38.99 Wh,20
+325510,13.0,Retina IPS LCD,Chip Apple M2 8 nhân,8,512,Nghe gọi qua FaceTime,Pin 36.59 Wh,20
+311073,12.4,Dynamic AMOLED 2X,Chip Snapdragon 8 Gen 2 for Galaxy,12,512,"5G, Có nghe gọi",Pin 10090 mAh,45
+311074,12.4,Dynamic AMOLED 2X,Chip Snapdragon 8 Gen 2 for Galaxy,12,256,"5G, Có nghe gọi",Pin 10090 mAh,45
+311072,12.4,Dynamic AMOLED 2X,Chip Snapdragon 8 Gen 2 for Galaxy,12,512,,Pin 10090 mAh,45
+307178,12.4,Dynamic AMOLED 2X,Chip Snapdragon 8 Gen 2 for Galaxy,12,256,,Pin 10090 mAh,45
+311063,11.0,Dynamic AMOLED 2X,Chip Snapdragon 8 Gen 2 for Galaxy,12,256,"5G, Có nghe gọi",Pin 8400 mAh,45
+311062,11.0,Dynamic AMOLED 2X,Chip Snapdragon 8 Gen 2 for Galaxy,8,128,"5G, Có nghe gọi",Pin 8400 mAh,45
+311061,11.0,Dynamic AMOLED 2X,Chip Snapdragon 8 Gen 2 for Galaxy,12,256,,Pin 8400 mAh,45
+274155,10.9,Retina IPS LCD,Chip Apple M1,8,64,"5G, Nghe gọi qua FaceTime",Pin 28.6 Wh (~ 7587 mAh),20
+303299,11.0,Dynamic AMOLED 2X,Chip Snapdragon 8 Gen 2 for Galaxy,8,128,,Pin 8400 mAh,45
+250732,10.2,Retina IPS LCD,Chip Apple A13 Bionic,3,256,"Hỗ trợ 4G, Nghe gọi qua FaceTime",Pin 32.4 Wh (~ 8600 mAh),20
+295453,10.9,Retina IPS LCD,Chip Apple A14 Bionic,4,64,"5G, Nghe gọi qua FaceTime",Pin 28.6 Wh (~ 7587 mAh),20
+248091,8.3,LED-backlit IPS LCD,Chip Apple A15 Bionic,4,64,Nghe gọi qua FaceTime,Pin 19.3 Wh (~ 5175 mAh),20
+250730,10.2,Retina IPS LCD,Chip Apple A13 Bionic,3,256,Nghe gọi qua FaceTime,Pin 32.4 Wh (~ 8600 mAh),20
+250731,10.2,Retina IPS LCD,Chip Apple A13 Bionic,3,64,"Hỗ trợ 4G, Nghe gọi qua FaceTime",Pin 32.4 Wh (~ 8600 mAh),20
+309848,11.0,IPS LCD,Chip Snapdragon 870 5G,8,256,,Pin 8840 mAh,33
+309818,10.9,TFT LCD,Chip Exynos 1380 8 nhân,6,128,,Pin 8000 mAh,45
+322134,10.4,TFT LCD,Chip Exynos 1280 8 nhân,4,64,"Hỗ trợ 4G, Có nghe gọi",Pin 7040 mAh,15
+320992,11.4,IPS LCD,Chip MediaTek Helio G99,8,128,"Hỗ trợ 4G, Có nghe gọi",Pin 8000 mAh,33
+326849,10.95,IPS LCD,Chip MediaTek Helio G88 8 nhân,8,128,"Hỗ trợ 4G, Có nghe gọi",Pin 7040 mAh,10
+315622,11.0,IPS LCD,Chip Snapdragon 680 8 nhân,8,256,,Pin 8000 mAh,10
+305838,10.36,IPS LCD,Chip Snapdragon 680 8 nhân,4,128,,Pin 7100 mAh,18
+326644,10.95,IPS LCD,Chip MediaTek Helio G88 8 nhân,4,128,"Hỗ trợ 4G, Có nghe gọi",Pin 7040 mAh,10
+326848,10.95,IPS LCD,Chip MediaTek Helio G88 8 nhân,4,64,"Hỗ trợ 4G, Có nghe gọi",Pin 7040 mAh,10
+326643,10.95,IPS LCD,Chip MediaTek Helio G88 8 nhân,4,128,,Pin 7040 mAh,10
+281821,10.36,IPS LCD,Chip Snapdragon 680 8 nhân,4,64,,Pin 7100 mAh,18
+310029,11.0,IPS LCD,Chip Snapdragon 680 8 nhân,6,128,,Pin 8000 mAh,10
+320991,10.95,IPS LCD,Chip Helio P60T,4,128,,Pin 8000 mAh,18
+310406,10.1,IPS LCD,Chip SCT310,4,64,"Hỗ trợ 4G, Có nghe gọi",Pin 6000 mAh,10

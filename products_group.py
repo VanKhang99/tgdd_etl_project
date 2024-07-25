@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 # IMPORT FILE FROM MY SOURCE
-from helper_functions import check_element_html
+# from helper_functions import check_element_html
 
 class ProductsGroup:
     def __init__(self, product_id, parent_tag):

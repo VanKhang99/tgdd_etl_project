@@ -1,0 +1,61 @@
+product_id,screen_inch,screen_resolution,screen_frequency_Hz,card_screen,core,core_gen,core_speed,ram,capacity,battery,weight_kg
+313333,15.6,Full HD,,Intel UHD,i5,12450H,2GHz,16,512,47 Wh,1.62
+311178,15.6,Full HD,,Radeon,Ryzen 5,7520U,2.8GHz,16,512,"3-cell, 42Wh",1.63
+322072,15.6,Full HD,144.0,RTX 3050 6GB,i5,,,16,512,60 Wh,2.38
+321192,15.6,Full HD,120.0,Intel Iris Xe,i5,1235U,1.3GHz,16,512,"3-cell, 41Wh",1.9
+318165,14.0,Full HD,,Intel UHD,i3,1115G4,3GHz,8,512,"3-cell, 41Wh",1.4
+310282,15.6,Full HD,,Intel UHD,i3 chuỗi N,,,8,256,40 Wh,1.7
+231244,13.3,Retina,,7 nhân GPU,Apple M1,,,8,256,Lên đến 18 giờ,1.29
+309565,15.6,Full HD,,Intel Iris Xe,i5,1240P,1.7GHz,16,512,"3-cell, 41Wh",1.72
+326049,14.0,Full HD,,Radeon,Ryzen 5,7530U,2GHz,8,512,"3-cell, 41Wh",1.36
+312414,15.6,Full HD,,Intel UHD,i3,1215U,1.2GHz,8,512,"3-cell, 42Wh",1.7
+323920,15.6,Full HD,,Intel Iris Xe,i5,1334U,1.3GHz,16,512,"3-cell, 41Wh",1.59
+325242,15.6,Full HD,120.0,Intel Iris Xe,i5,1235U,1.3GHz,16,512,"3-cell, 41Wh",1.66
+322270,14.0,Full HD,,Intel Iris Xe,i5,1235U,1.3GHz,16,512,"3-cell, 42Wh",1.4
+324735,15.6,Full HD,,Intel Iris Xe,i5,1155G7,2.5GHz,8,512,36Wh,1.7
+313084,15.6,Full HD,,Intel UHD,i3,1215U,1.2GHz,8,512,"3-cell, 41Wh",1.69
+282827,13.6,Retina,,8 nhân GPU,Apple M2,,100GB/s,8,256,Lên đến 18 giờ,1.24
+317709,15.6,Full HD,144.0,RTX 3050 4GB,i5,12500H,2.5GHz,16,1,"4-cell, 56Wh",2.2
+310839,15.6,Full HD,,Intel Iris Xe,i5,13500H,2.6GHz,16,512,"3-cell, 50Wh",1.7
+324340,15.6,Full HD,120.0,Intel Iris Xe,i5,1235U,1.3GHz,16,512,"3-cell, 41Wh",1.9
+326637,14.0,Full HD+,,Intel UHD,i5,1235U,1.3GHz,16,512,"3-cell Li-ion, 58 Wh",1.5
+313627,15.6,Full HD,,Radeon,Ryzen 7,5700U,1.8GHz,16,512,42 Wh,1.61
+326050,15.6,Full HD,,Intel UHD,i3,,,8,512,"3-cell, 41Wh",1.59
+313332,15.6,Full HD,144.0,RTX 3050 4GB,i7,12700H,2.30 GHz,8,512,"4-cell, 57.5Wh",2.5
+318163,15.6,Full HD,144.0,RTX 2050 4GB,i5,12450H,2GHz,16,512,"3-cell, 52.5Wh",2.29
+322269,15.6,Full HD,144.0,RTX 2050 4GB,Ryzen 5,7535HS,3.3GHz,16,512,"3-cell, 48Wh",2.3
+311180,15.6,Full HD,,Intel Iris Xe,i5,12500H,2.5GHz,16,512,"3-cell, 50Wh",1.7
+322082,14.0,Full HD+,,Intel UHD,i5,12450H,2GHz,16,1,56.6Wh,1.46
+285963,14.0,Full HD,,Intel UHD,i5,1235U,1.3GHz,8,512,"3-cell, 41Wh",1.47
+317712,14.0,Full HD,,Intel UHD,i3,1215U,1.2GHz,8,512,"3-cell, 42Wh",1.4
+322568,15.6,Full HD,144.0,RTX 3050 4GB,Ryzen 5,7535HS,3.3GHz,16,512,"3-cell, 48Wh",2.3
+314630,15.6,Full HD,,RTX 2050 4GB,i5,13420H,2.1GHz,16,512,"3-cell, 50Wh",1.7
+309375,16.0,Full HD,,Intel Iris Xe,i5,1335U,1.3GHz,16,512,"3-cell, 42Wh",1.88
+325500,15.6,Full HD,,AMD Radeon 610M,Ryzen 5,7520U,2.8GHz,16,512,47 Wh,1.62
+312871,14.0,Full HD,,Radeon,Ryzen 5,7520U,2.8GHz,8,512,"3-cell, 41Wh",1.36
+311114,14.0,Full HD,,Intel UHD,i3,1215U,1.2GHz,8,256,"3-cell, 41Wh",1.41
+325478,14.0,2K,120.0,Radeon,Ryzen 5,7535HS,3.3GHz,16,512,"4-cell Li-ion, 75 Wh",1.3
+325691,15.6,Full HD,,Intel Iris Xe,i7,1355U,1.7GHz,16,512,"3-cell, 41Wh",1.59
+321467,15.6,Full HD,144.0,RTX 2050 4GB,Ryzen 5,7535HS,3.3GHz,16,512,"3-cell, 52.5Wh",2.29
+316940,15.6,Full HD,144.0,RTX 2050 4GB,i5,12450H,2GHz,16,512,"3-cell Li-ion, 52.4 Wh",1.86
+296921,15.6,Full HD,120.0,Intel UHD,i5,1235U,1.3GHz,8,512,"3-cell, 41Wh",1.9
+322861,15.6,Full HD,,Intel Iris Xe,i5,1235U,1.3GHz,16,1,"3-cell, 42Wh",1.7
+320870,15.6,Full HD,,Intel Iris Xe,i5,1155G7,2.5GHz,16,512,36Wh,1.7
+313615,15.6,Full HD,,Intel UHD,i3,1215U,1.2GHz,8,256,45Wh,1.63
+314841,15.6,Full HD,120.0,MX550 2GB,i7,1355U,1.7GHz,16,512,"4-cell, 54Wh",1.65
+311176,15.6,Full HD,,Intel Iris Xe,i5,1335U,1.3GHz,16,512,"3-cell, 41Wh",1.69
+316941,15.6,Full HD,144.0,RTX 3050 4GB,i7,12650H,2.30 GHz,8,512,"3-cell Li-ion, 52.4 Wh",1.86
+325477,15.6,2K,120.0,Intel Iris Xe,i5,12500H,2.5GHz,16,512,"3-cell, 50Wh",1.7
+323325,14.0,Full HD,,Intel UHD,i5,1335U,1.3GHz,16,512,"3-cell, 41Wh",1.36
+313582,15.6,Full HD,,Intel UHD,i5,12450H,2GHz,16,1,47 Wh,1.62
+305008,15.6,Full HD,,Intel UHD,i5,1335U,1.3GHz,8,512,"3-cell, 42Wh",1.7
+304543,15.6,Full HD,,Intel UHD,i5,1235U,1.3GHz,8,512,"3-cell, 40Wh",1.7
+313616,15.6,Full HD,,Intel UHD,i3,1215U,1.2GHz,8,512,45Wh,1.63
+320434,15.6,Full HD,144.0,RTX 4050 6GB,i7,13620H,2.4GHz,16,512,"4-cell, 90Wh",2.2
+304869,14.0,Full HD,,Intel Iris Xe,i5,13500H,2.6GHz,16,512,"3-cell, 50Wh",1.5
+302533,15.6,Full HD,,Intel Iris Xe,i5,1240P,1.7GHz,8,512,"3 cell, 41.04 Wh",1.72
+303835,15.6,Full HD,120.0,Intel UHD,i5,1235U,1.3GHz,8,512,"3-cell, 41Wh",1.67
+325243,14.0,Full HD,,Intel UHD,i5,1235U,1.3GHz,8,512,"3-cell, 41Wh",1.49
+302532,15.6,Full HD,,Intel Iris Xe,i5,1235U,1.3GHz,8,512,"3-cell, 41Wh",1.7
+321436,15.6,Full HD,,Radeon,Ryzen 7,5700U,1.8GHz,8,512,"3-cell, 50Wh",1.7
+310449,15.6,Full HD,,Intel Iris Xe,i5,1235U,1.3GHz,8,512,"3-Cell, 39.3 Wh",1.7

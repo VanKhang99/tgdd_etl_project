@@ -1,9 +1,17 @@
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 import re
+import math
 
-def tranform_int(regex, content, index):
-    return int(re.findall(regex, content)[index])  
+from constants import REGEX_ONLY_DIGITS
+
+def tranform_int_float(content, index, to_float=False):
+    value = float(re.findall(REGEX_ONLY_DIGITS, content)[index])
+    rounded_down = math.floor(value)
+    return value if to_float == True else int(rounded_down) 
+
+def helper_split_str_data(data, by, index):
+    return data.split(by)[index].strip()
 
 def check_element_html(parent_tag, xpath, one_tag=True):
     try:
@@ -12,7 +20,7 @@ def check_element_html(parent_tag, xpath, one_tag=True):
         return None
 
 def handle_classes_base_on_url(url):
-    classes_base_on_url = dict()
+    classes_base_on_url = {}
 
     def helper_assign_attribute(**kwargs):
         classes_base_on_url['parent_tag_class'] = kwargs['parent_tag_class']

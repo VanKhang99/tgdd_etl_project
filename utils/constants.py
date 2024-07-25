@@ -1,0 +1,3 @@
+REGEX_ONLY_DIGITS = r'[\d.]+'
+REGEX_DIGITS_BEFORE_MM = r'[\d.]+(?=\s?mm)'
+REGEX_DIGITS_LAPTOP_SCREEN_HZ = r'[\d]+Hz'

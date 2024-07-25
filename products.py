@@ -2,8 +2,8 @@ from selenium.webdriver.common.by import By
 import re
 
 # IMPORT FILE FROM MY SOURCE
-from helper_functions import check_element_html, tranform_int
-from constants import REGEX_ONLY_DIGITS
+from utils.helper_functions import check_element_html, tranform_int_float
+from utils.constants import REGEX_ONLY_DIGITS
 
 class Product:
     def __init__(self, product_id, parent_tag, parent_image_link_class):
@@ -37,7 +37,7 @@ class Product:
 
     def get_percent_discounted(self, xpath):
         tag_html = check_element_html(self.parent_tag, xpath)
-        return tranform_int(REGEX_ONLY_DIGITS, tag_html.text, 0) if tag_html else None
+        return tranform_int_float(REGEX_ONLY_DIGITS, tag_html.text, 0) if tag_html else None
 
     def get_installment_zero_percent(self, xpath):
         return 1 if check_element_html(self.parent_tag, xpath) else 0

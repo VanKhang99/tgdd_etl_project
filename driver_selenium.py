@@ -9,5 +9,5 @@ def run_driver_selenium(url):
     options = Options()
     driver = webdriver.Chrome(service=service, options=options)
     driver.get(url)
-    time.sleep(8)
+    time.sleep(10)
     return driver
